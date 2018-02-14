@@ -1,3 +1,5 @@
+stage "run on dockerslaveec2"
+
 node ('dockerslaveec2') {
              
     stage('Clone repository') {
