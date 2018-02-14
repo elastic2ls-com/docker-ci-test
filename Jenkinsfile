@@ -1,4 +1,4 @@
-stage "run on dockerslaveec2"
+stage ('run on dockerslaveec2') {
 
 node ('dockerslaveec2') {
              
@@ -34,4 +34,7 @@ node ('dockerslaveec2') {
             app.push('latest')
         }
     }
+}
+
+  
 }
