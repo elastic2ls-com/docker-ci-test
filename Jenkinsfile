@@ -1,4 +1,4 @@
-node  {
+node  ("docker-slave-ec2") {
     
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
