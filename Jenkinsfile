@@ -1,4 +1,4 @@
-def label ['def dockerslaveec2'] 
+def label ['dockerslaveec2'] 
 
 node ('label') {
              
