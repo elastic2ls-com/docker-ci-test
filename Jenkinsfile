@@ -1,4 +1,4 @@
-node { label 'dockerslaveec2'} {
+node ('dockerslaveec2') { label 'dockerslaveec2'} {
     
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
