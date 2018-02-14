@@ -1,9 +1,6 @@
-node ('dockerslaveec2') {
+agent ('dockerslaveec2') {
     
-    label ('dockerslaveec2') {
-        
-        dockerslaveec2
-    } 
+
     
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
