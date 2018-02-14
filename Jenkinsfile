@@ -1,4 +1,4 @@
-node (dockerslaveec2) {
+node ('dockerslaveec2') {
              
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
@@ -10,7 +10,7 @@ node (dockerslaveec2) {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("elastic2ls/piplined-apache")
+        app = docker.build('elastic2ls/piplined-apache')
     }
 
     stage('Test image') {
@@ -28,8 +28,8 @@ node (dockerslaveec2) {
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused. */
         docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
-            app.push("${env.BUILD_NUMBER}")
-            app.push("latest")
+            app.push('${env.BUILD_NUMBER}')
+            app.push('latest')
         }
     }
 }
