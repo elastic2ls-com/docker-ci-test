@@ -1,6 +1,4 @@
-stage ('run on dockerslaveec2') {
-
-node ('dockerslaveec2') {
+node {
              
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
@@ -34,7 +32,4 @@ node ('dockerslaveec2') {
             app.push('latest')
         }
     }
-}
-
-  
 }
